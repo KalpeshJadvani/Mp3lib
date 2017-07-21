@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mp3_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.example.kalpesh.mp3listlib.LibLayout.SlidingUpPanelLayout
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoDragView="@+id/dragView"
+            sothree:umanoOverlay="true"
+            sothree:umanoPanelHeight="?attr/actionBarSize"
+            sothree:umanoParalaxOffset="0dp"
+            sothree:umanoShadowHeight="4dp">
+
+            <!-- MAIN CONTENT -->
+
+            <include
+                android:id="@+id/include_sliding_panelchildone"
+                layout="@layout/include_slidingpanel_childone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- SLIDING LAYOUT -->
+
+            <include
+                android:id="@+id/include_sliding_panel_childtwo"
+                layout="@layout/include_slidingpanel_childtwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.example.kalpesh.mp3listlib.LibLayout.SlidingUpPanelLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
