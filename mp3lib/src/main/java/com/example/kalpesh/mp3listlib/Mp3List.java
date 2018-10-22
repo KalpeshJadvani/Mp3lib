@@ -322,7 +322,12 @@ public class Mp3List extends Activity implements ListenerClass.MediaListener ,Vi
                 @Override
                 public void loadSongsComplete(ArrayList<ObjectArrary> songsList_) {
 
-                    songList = songsList_;
+                    if(songsList_ != null)
+                    {
+                        songList = songsList_;
+                    }     else {
+                        songList = new ArrayList<ObjectArrary>();
+                    }
 
                     mAllSongsListAdapter = new AllSongsListAdapter(context, songList);
 

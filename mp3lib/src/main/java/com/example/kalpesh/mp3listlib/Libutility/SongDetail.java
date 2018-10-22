@@ -108,9 +108,8 @@ public class SongDetail {
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
+
 		return curThumb;
 	}
 
@@ -128,8 +127,6 @@ public class SongDetail {
 				curThumb = BitmapFactory.decodeFileDescriptor(fd);
 			}
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return curThumb;
